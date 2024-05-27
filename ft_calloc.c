@@ -6,7 +6,7 @@
 /*   By: julessainthorant <marvin@42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 18:26:10 by julessainthor     #+#    #+#             */
-/*   Updated: 2024/05/22 11:44:58 by jsaintho         ###   ########.fr       */
+/*   Updated: 2024/05/22 12:05:39 by jsaintho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t count, size_t size)
 
 	if (size > 2147483647 || count > 2147483647)
 		return (NULL);
-	if (size == 0 || count == 0)
+	if ((int)size <= 0 || (int)count <= 0)
 	{
 		c_alloc = (void *)(malloc (1));
 		*(unsigned char *)(c_alloc) = 0;

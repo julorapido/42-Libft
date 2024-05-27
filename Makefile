@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: julessainthorant <marvin@42.fr>            +#+  +:+       +#+         #
+#    By: jsaintho <jsaintho@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/04/03 21:19:02 by julessainthor     #+#    #+#              #
-#    Updated: 2024/04/05 01:06:30 by julessainthor    ###   ########.fr        #
+#    Created: 2024/04/03 21:19:02 by julessainth       #+#    #+#              #
+#    Updated: 2024/05/27 12:19:50 by jsaintho         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,36 +19,39 @@ LIBC =	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 ADDITIONAL =	ft_itoa.c ft_putchar_fd.c ft_putendl_fd.c ft_putnbr_fd.c ft_putstr_fd.c \
 				ft_split.c ft_strjoin.c ft_strmapi.c ft_strtrim.c ft_substr.c ft_striteri.c
 
-SRCS = ${LIBC} ${ADDITIONAL}
 
-SRCSALL = ${LIBC} ${ADDITIONAL}
+BONUS =	ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c ft_lstclear_bonus.c \
+		ft_lstdelone_bonus.c ft_lstiter_bonus.c ft_lstlast_bonus.c \
+		ft_lstmap_bonus.c ft_lstnew_bonus.c ft_lstsize_bonus.c
+
+SRCS = ${LIBC} ${ADDITIONAL}
+SRCSALL = ${LIBC} ${ADDITIONAL} ${BONUS}
 
 OBJS = ${SRCS:.c=.o}
-
 OBJSALL = ${SRCSALL:.c=.o} 
 
-LIB = libft.a
+NAME = libft.a
 
-CC = gcc
+CC = cc
 
 CFLAGS = -Wall -Werror -Wextra -I ./
 
 .c.o:
 		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+	
+all: $(NAME)
 
-${LIB}:	${OBJS}
-		ar -rsc ${LIB} ${OBJS}
+${NAME}: ${OBJS}
+		ar -rsc ${NAME} ${OBJS}
 
 bonus:	${OBJSALL}
 		ar -rsc ${LIB} ${OBJSALL}
-
-all: 	${LIB}
 
 clean:	
 		rm -f ${OBJSALL}
 
 fclean:	clean;
-		rm -f ${LIB}
+		rm -f ${NAME}
 
 re:	fclean all
 
