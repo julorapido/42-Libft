@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsaintho <julesaintho@gmail.com>           +#+  +:+       +#+        */
+/*   By: jsaintho <jsaintho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 11:09:49 by jsaintho          #+#    #+#             */
-/*   Updated: 2024/04/05 01:55:25 by julessainthor    ###   ########.fr       */
+/*   Updated: 2024/05/28 17:43:44 by jsaintho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+
+#include <libft.h>
 
 static size_t	count_words(char const *s, char c)
 {
@@ -40,6 +41,19 @@ static void	fill_tab(char *new, char const *s, char c)
 	new[i] = '\0';
 }
 
+static void	free_tab(char **t)
+{
+	size_t	i;
+
+	i = 0;
+	while (t[i])
+	{
+		free(t[i++]);
+	}
+	free(t);
+	return ;
+}
+
 static void	set_mem(char **tab, char const *s, char c)
 {
 	size_t	count;
@@ -57,7 +71,10 @@ static void	set_mem(char **tab, char const *s, char c)
 		{
 			tab[i] = malloc(sizeof(char) * (count + 1));
 			if (!tab[i])
+			{
+				free_tab(tab);
 				return ;
+			}
 			fill_tab(tab[i], (s + index), c);
 			i++;
 			index = index + count;

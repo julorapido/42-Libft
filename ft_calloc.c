@@ -6,7 +6,7 @@
 /*   By: julessainthorant <marvin@42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/04 18:26:10 by julessainthor     #+#    #+#             */
-/*   Updated: 2024/05/22 12:05:39 by jsaintho         ###   ########.fr       */
+/*   Updated: 2024/05/28 16:38:02 by jsaintho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -17,7 +17,8 @@ void	*ft_calloc(size_t count, size_t size)
 	void	*c_alloc;
 	size_t	i;
 
-	if (size > 2147483647 || count > 2147483647)
+	if (size > 2147483647 || count > 2147483647
+		|| ((count == 0 || size == 0) && !(size == 0 && count == 0)))
 		return (NULL);
 	if ((int)size <= 0 || (int)count <= 0)
 	{
