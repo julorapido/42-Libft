@@ -6,7 +6,7 @@
 /*   By: jsaintho <jsaintho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 11:09:49 by jsaintho          #+#    #+#             */
-/*   Updated: 2024/05/28 17:43:44 by jsaintho         ###   ########.fr       */
+/*   Updated: 2024/05/29 10:44:25 by jsaintho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static void	free_tab(char **t)
 	return ;
 }
 
-static void	set_mem(char **tab, char const *s, char c)
+static int	set_mem(char **tab, char const *s, char c)
 {
 	size_t	count;
 	size_t	index;
@@ -71,10 +71,7 @@ static void	set_mem(char **tab, char const *s, char c)
 		{
 			tab[i] = malloc(sizeof(char) * (count + 1));
 			if (!tab[i])
-			{
-				free_tab(tab);
-				return ;
-			}
+				return (-1);
 			fill_tab(tab[i], (s + index), c);
 			i++;
 			index = index + count;
@@ -83,17 +80,23 @@ static void	set_mem(char **tab, char const *s, char c)
 			index++;
 	}
 	tab[i] = 0;
+	return (1);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	size_t	words;
 	char	**tab;
+	int		a;
 
 	words = count_words(s, c);
 	tab = malloc(sizeof(char *) * (words + 1));
 	if (!tab)
 		return (NULL);
-	set_mem(tab, s, c);
+	a = set_mem(tab, s, c);
+	if (a == -1)
+	{
+		free_tab(tab);
+	}
 	return (tab);
 }
