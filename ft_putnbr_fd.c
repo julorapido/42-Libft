@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: julessainthorant <marvin@42.fr>            +#+  +:+       +#+        */
+/*   By: jsaintho <jsaintho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/05 01:02:56 by julessainthor     #+#    #+#             */
-/*   Updated: 2024/04/05 01:03:01 by julessainthor    ###   ########.fr       */
+/*   Created: 2024/04/05 01:02:56 by julessainth       #+#    #+#             */
+/*   Updated: 2024/05/29 15:52:13 by jsaintho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 static void	print_nb(long nb, int fd)

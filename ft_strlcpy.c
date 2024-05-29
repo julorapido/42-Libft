@@ -3,15 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jsaintho <julesaintho@gmail.com>           +#+  +:+       +#+        */
+/*   By: jsaintho <jsaintho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 10:14:36 by jsaintho          #+#    #+#             */
-/*   Updated: 2024/05/22 10:43:15 by jsaintho         ###   ########.fr       */
+/*   Updated: 2024/05/29 16:05:42 by jsaintho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-unsigned int	str_len(char *str)
+
+#include "libft.h"
+
+size_t	str_len(const char *str)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -21,10 +24,10 @@ unsigned int	str_len(char *str)
 	return (i);
 }
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	unsigned int	i;
-	unsigned int	s;
+	size_t	i;
+	size_t	s;
 
 	s = str_len(src);
 	if (size == 0)

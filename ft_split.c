@@ -6,11 +6,11 @@
 /*   By: jsaintho <jsaintho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 11:09:49 by jsaintho          #+#    #+#             */
-/*   Updated: 2024/05/29 10:44:25 by jsaintho         ###   ########.fr       */
+/*   Updated: 2024/05/29 16:06:22 by jsaintho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 static size_t	count_words(char const *s, char c)
 {
@@ -97,6 +97,7 @@ char	**ft_split(char const *s, char c)
 	if (a == -1)
 	{
 		free_tab(tab);
+		return (NULL);
 	}
 	return (tab);
 }

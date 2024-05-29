@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: julessainthorant <marvin@42.fr>            +#+  +:+       +#+        */
+/*   By: jsaintho <jsaintho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/04 23:20:19 by julessainthor     #+#    #+#             */
-/*   Updated: 2024/04/05 01:57:26 by julessainthor    ###   ########.fr       */
+/*   Created: 2024/04/04 23:20:19 by julessainth       #+#    #+#             */
+/*   Updated: 2024/05/29 15:55:38 by jsaintho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 static int	ft_char_in_set(char c, char const *set)

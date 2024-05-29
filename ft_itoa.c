@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: julessainthorant <marvin@42.fr>            +#+  +:+       +#+        */
+/*   By: jsaintho <jsaintho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/04 19:59:23 by julessainthor     #+#    #+#             */
-/*   Updated: 2024/05/22 11:33:05 by jsaintho         ###   ########.fr       */
+/*   Created: 2024/04/04 19:59:23 by julessainth       #+#    #+#             */
+/*   Updated: 2024/05/29 15:54:04 by jsaintho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 static	size_t	count_size(long nb)
