@@ -6,10 +6,12 @@
 /*   By: julessainthorant <marvin@42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 10:14:25 by julessainthor     #+#    #+#             */
-/*   Updated: 2024/06/07 17:24:31 by jsaintho         ###   ########.fr       */
+/*   Updated: 2024/07/15 15:46:02 by jsaintho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "get_next_line.h"
+#include "libft.h"
 
 /*#include <stdio.h>
 #include <fcntl.h>
