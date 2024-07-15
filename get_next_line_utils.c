@@ -6,12 +6,13 @@
 /*   By: jsaintho <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 15:45:35 by jsaintho          #+#    #+#             */
-/*   Updated: 2024/07/15 15:45:38 by jsaintho         ###   ########.fr       */
+/*   Updated: 2024/07/15 15:51:58 by jsaintho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
+/*
 size_t	ft_strlen(char *s)
 {
 	size_t	i;
@@ -51,6 +52,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	res[sizetotal] = 0;
 	return (res);
 }
+*/
 
 char	*ft_strchr(const char *string, int searchedChar )
 {
@@ -65,6 +67,7 @@ char	*ft_strchr(const char *string, int searchedChar )
 		return (NULL);
 }
 
+/*
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*c_alloc;
@@ -89,3 +92,4 @@ void	*ft_calloc(size_t count, size_t size)
 	}
 	return (c_alloc);
 }
+*/
