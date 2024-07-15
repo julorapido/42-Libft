@@ -6,7 +6,7 @@
 /*   By: jsaintho <jsaintho@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/05 01:13:37 by julessainth       #+#    #+#             */
-/*   Updated: 2024/07/15 16:21:57 by jsaintho         ###   ########.fr       */
+/*   Updated: 2024/07/15 17:30:38 by jsaintho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
 char	*get_next_line(int fd);
 char	*ft_strchr(const char *string, int searchedChar );
+long	ft_atoi_l(const char *str);
 
 /* additional functions */
 char	*ft_substr(char const *s, unsigned int start, size_t len);
